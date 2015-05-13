@@ -1,0 +1,39 @@
+{
+    "name": "rawcreative/receiptful",
+    "description": "Receiptful PHP Integration",
+    "keywords": [
+        "php",
+        "receiptful"
+    ],
+    "homepage": "https://github.com/rawcreative/receiptful",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": ":Tim Debo",
+            "email": "tim@rawcreativestudios.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : ">=5.4.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "4.*",
+        "monolog/monolog":"*"
+    },
+    "autoload": {
+        "psr-4": {
+            "RawCreative\\Receiptful": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RawCreative\\Receiptful\\Test\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
