@@ -27,6 +27,7 @@
             "RawCreative\\Receiptful\\": "src/"
         }
     },
+    "minimum-stability": "dev",
     "autoload-dev": {
         "psr-4": {
             "RawCreative\\Receiptful\\Test\\": "tests"
