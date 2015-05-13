@@ -1,4 +1,4 @@
-# rawcreative/receiptful
+# Receiptful PHP SDK (WIP)
 
 [![Latest Version](https://img.shields.io/github/release/rawcreative/receiptful.svg?style=flat-square)](https://github.com/rawcreative/receiptful/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
@@ -18,12 +18,6 @@ $ composer require rawcreative/receiptful
 ``` php
 
 
-```
-
-## Testing
-
-``` bash
-$ phpunit
 ```
 
 ## Contributing
