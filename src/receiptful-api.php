@@ -18,7 +18,7 @@ return [
         ],
         'receipt' => [
             'httpMethod' => 'GET',
-            'uri' => '/api/v{api_version}/receipt/{receipt_id}',
+            'uri' => '/api/v{api_version}/receipts/{receipt_id}',
             'responseModel' => 'getResponse',
             'parameters' => [
                 'api_version' => [
@@ -29,9 +29,11 @@ return [
                 'receipt_id' => [
                     'location' => 'uri',
                     'type' => 'string',
+                    'required' => true,
                 ],
             ],
         ],
+
         'sendReceipt' => [
             'httpMethod' => 'POST',
             'uri' => '/api/v{api_version}/receipts',
@@ -111,8 +113,26 @@ return [
                 'coupons' => [
                     'location' => 'json',
                     'type' => 'array',
-                ]
+                ],
 
+            ],
+        ],
+
+        'resendReceipt' => [
+            'httpMethod' => 'POST',
+            'uri' => '/api/v{api_version}/receipts/{receipt_id}/send',
+            'responseModel' => 'getResponse',
+            'parameters' => [
+                'api_version' => [
+                    'required' => true,
+                    'type' => 'string',
+                    'location' => 'uri',
+                ],
+                'receipt_id' => [
+                    'location' => 'uri',
+                    'type' => 'string',
+                    'required' => true,
+                ],
             ],
         ],
 
@@ -128,8 +148,92 @@ return [
                 ],
             ],
         ],
+
+        'coupon' => [
+            'httpMethod' => 'GET',
+            'uri' => '/api/v{api_version}/coupons/{coupon_id}',
+            'responseModel' => 'getResponse',
+            'parameters' => [
+                'api_version' => [
+                    'required' => true,
+                    'type' => 'string',
+                    'location' => 'uri',
+                ],
+                'coupon_id' => [
+                    'location' => 'uri',
+                    'type' => 'string',
+                    'required' => true,
+                ],
+            ],
+        ],
+
+        'deleteCoupon' => [
+            'httpMethod' => 'DELETE',
+            'uri' => '/api/v{api_version}/coupons/{coupon_id}',
+            'responseModel' => 'getResponse',
+            'parameters' => [
+                'api_version' => [
+                    'required' => true,
+                    'type' => 'string',
+                    'location' => 'uri',
+                ],
+                'coupon_id' => [
+                    'location' => 'uri',
+                    'type' => 'string',
+                    'required' => true,
+                ],
+            ],
+        ],
+
+        'useCoupon' => [
+            'httpMethod' => 'PUT',
+            'uri' => '/api/v{api_version}/coupons/{coupon_id}/use',
+            'responseModel' => 'getResponse',
+            'summary' => 'Mark a coupon as used.',
+            'parameters' => [
+                'api_version' => [
+                    'required' => true,
+                    'type' => 'string',
+                    'location' => 'uri',
+                ],
+                'coupon_id' => [
+                    'location' => 'uri',
+                    'type' => 'string',
+                    'required' => true,
+                ],
+                'reference' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                    'required' => true,
+                ],
+                'amount' => [
+                    'location' => 'json',
+                    'type' => 'numeric',
+                    'required' => true,
+                ],
+                'currency' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                    'required' => true,
+                ],
+            ],
+        ],
+
         'products' => [],
-        'users' => [],
+
+        'currentUser' => [
+            'httpMethod' => 'GET',
+            'uri' => '/api/v{api_version}/users/current',
+            'responseModel' => 'getResponse',
+            'summary' => 'Retrieve current API user info.',
+            'parameters' => [
+                'api_version' => [
+                    'required' => true,
+                    'type' => 'string',
+                    'location' => 'uri',
+                ],
+            ],
+        ],
     ],
     'models' => [
         'getResponse' => [
