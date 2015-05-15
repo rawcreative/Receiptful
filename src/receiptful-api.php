@@ -219,7 +219,140 @@ return [
             ],
         ],
 
-        'products' => [],
+        'createProduct' => [
+            'httpMethod' => 'POST',
+            'uri' => '/api/v{api_version}/products',
+            'responseModel' => 'getResponse',
+            'parameters' => [
+                'api_version' => [
+                    'required' => true,
+                    'type' => 'string',
+                    'location' => 'uri',
+                ],
+                'brand' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                ],
+                'categories' => [
+                    'location' => 'json',
+                    'type' => 'array',
+                ],
+                'description' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                ],
+                'hidden' => [
+                    'location' => 'json',
+                    'type' => 'boolean',
+                ],
+                'images' => [
+                    'location' => 'json',
+                    'type' => 'array',
+                ],
+                'product_id' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                    'required' => true,
+                ],
+                'tags' => [
+                    'location' => 'json',
+                    'type' => 'array',
+                ],
+                'title' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                ],
+                'type' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                ],
+                'url' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                ],
+                'variants' => [
+                    'location' => 'json',
+                    'type' => 'array',
+                ],
+
+            ],
+        ],
+
+         'updateProduct' => [
+            'httpMethod' => 'PUT',
+            'uri' => '/api/v{api_version}/products/{product_id}',
+            'responseModel' => 'getResponse',
+            'parameters' => [
+                'api_version' => [
+                    'required' => true,
+                    'type' => 'string',
+                    'location' => 'uri',
+                ],
+                'product_id' => [
+                    'required' => true,
+                    'type' => 'string',
+                    'location' => 'uri',
+                ],
+                'brand' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                ],
+                'categories' => [
+                    'location' => 'json',
+                    'type' => 'array',
+                ],
+                'description' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                ],
+                'hidden' => [
+                    'location' => 'json',
+                    'type' => 'boolean',
+                ],
+                'images' => [
+                    'location' => 'json',
+                    'type' => 'array',
+                ],
+                'product_id' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                    'required' => true,
+                ],
+                'tags' => [
+                    'location' => 'json',
+                    'type' => 'array',
+                ],
+                'title' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                ],
+                'type' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                ],
+                'url' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                ],
+                'variants' => [
+                    'location' => 'json',
+                    'type' => 'array',
+                ],
+
+            ],
+        ],
+
+        'deleteProduct' => [
+            'httpMethod' => 'DELETE',
+            'uri' => '/api/v{api_version}/products/{product_id}',
+            'responseModel' => 'getResponse',
+            'parameters' => [
+                'api_version' => [
+                    'required' => true,
+                    'type' => 'string',
+                    'location' => 'uri',
+                ],
+        ],
 
         'currentUser' => [
             'httpMethod' => 'GET',
@@ -228,6 +361,11 @@ return [
             'summary' => 'Retrieve current API user info.',
             'parameters' => [
                 'api_version' => [
+                    'required' => true,
+                    'type' => 'string',
+                    'location' => 'uri',
+                ],
+                'product_id' => [
                     'required' => true,
                     'type' => 'string',
                     'location' => 'uri',
