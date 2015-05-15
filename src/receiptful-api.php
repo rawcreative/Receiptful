@@ -352,6 +352,7 @@ return [
                     'type' => 'string',
                     'location' => 'uri',
                 ],
+             ],
         ],
 
         'currentUser' => [

@@ -93,5 +93,14 @@ class Api extends GuzzleClient
         return $this->execute($command);
 
     }
+   
+    public function deleteProduct($id)
+    {
+        $command = $this->getCommand('deleteProduct', [
+                            'product_id' => $id
+                           ]);
+
+        return $this->execute($command);
+    }
 
 }
