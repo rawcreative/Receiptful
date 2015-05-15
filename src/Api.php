@@ -139,7 +139,7 @@ class Api extends GuzzleClient
 
     /**
      * Delete a product
-     * 
+     *
      * @param $id
      * @return \GuzzleHttp\Ring\Future\FutureInterface|mixed|null
      */

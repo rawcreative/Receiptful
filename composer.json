@@ -18,21 +18,14 @@
         "php" : ">=5.4.0",
         "guzzlehttp/guzzle-services": "0.5.*"
     },
-    "require-dev": {
-        "phpunit/phpunit" : "4.*",
-        "monolog/monolog":"*"
-    },
+
     "autoload": {
         "psr-4": {
             "RawCreative\\Receiptful\\": "src/"
         }
     },
     "minimum-stability": "dev",
-    "autoload-dev": {
-        "psr-4": {
-            "RawCreative\\Receiptful\\Test\\": "tests"
-        }
-    },
+
     "extra": {
         "branch-alias": {
             "dev-master": "0.2-dev"
