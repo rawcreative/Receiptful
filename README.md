@@ -1,4 +1,4 @@
-# Receiptful PHP SDK (WIP)
+# Receiptful PHP SDK
 
 [![Latest Version](https://img.shields.io/github/release/rawcreative/receiptful.svg?style=flat-square)](https://github.com/rawcreative/receiptful/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
@@ -99,10 +99,6 @@ $user = $receiptful->currentUser();
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
-## Credits
-
-- [Tim Debo](https://github.com/rawcreative)
-- [All Contributors](../../contributors)
 
 ## License
 
